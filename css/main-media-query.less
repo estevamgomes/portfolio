@@ -1,0 +1,55 @@
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width: 650px) and (min-width: 480px) {
+	#container {
+		.content-wrapper {
+			&.home .hentry .entry-overlay .entry-header .entry-link {
+				.entry-title {
+					margin: 0;
+					font-size: 1.2rem;
+				}
+				.entry-description {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// @media print,
+// 	   (-o-min-device-pixel-ratio: 5/4),
+// 	   (-webkit-min-device-pixel-ratio: 1.25),
+// 	   (min-resolution: 120dpi) {
+// 	/* Style adjustments for high resolution devices */
+// }
+
+@media only screen and (max-width: 480px) {
+
+	// start responsive grid - http://www.responsivegridsystem.com/calculator/
+	/*  GO FULL WIDTH BELOW 480 PIXELS */
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+		width: 100%; 
+	}
+	// end resposive grid
+
+
+	#container {
+		#header {
+			.menu-list-main .menu-item .contact-toggle {
+				display: none;
+			}
+		}
+	}
+		
+}
