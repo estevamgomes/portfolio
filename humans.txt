@@ -2,12 +2,10 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+                            
+	Your title: Estevam Gomes.
+	Site: www.estevamgomes.com.br
+	Location: Belo Horizonte, Brasil.
 
 # TECHNOLOGY COLOPHON
 

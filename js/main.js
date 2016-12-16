@@ -154,64 +154,6 @@ $(function(){
 		});
 	});
 	*/
-
-
-	//////////
-	// jogo //
-	//////////
-	/*
-	var naveY = 0;
-	var naveX = 0;
-	var naveNewY = 0;
-	var naveNewX = 0;
-	var tiroId = 0;
-
-	$('.game-stage')
-		.append('<div class="nave"></div>')
-		.parent().mousemove(function( event ) {
-			var stageW = $('.game-stage').innerWidth();
-
-			var mouseY = event.pageY;
-			var mouseX = event.pageX * (stageW / 5) / stageW;
-
-			var naveH = $('.nave').innerHeight();
-			var naveW = $('.nave').innerWidth();
-
-			naveNewY = mouseY - naveH / 2;
-			naveNewX = mouseX - naveW;
-		})
-		.click(function() {
-
-			var naveH = $('.nave').innerHeight();
-			var naveW = $('.nave').innerWidth();
-
-			$('.game-stage')
-				.append('<div class="tiro" data-tiro-id="' + tiroId + '"></div>');
-			$('[data-tiro-id=' + tiroId + ']')
-				.css('top', (naveY + naveH / 2) + 'px')
-				.css('left', (naveX + naveW) + 'px');
-			tiroId++;
-		});
-
-	setInterval(function() {
-		naveY += (naveNewY - naveY) / 5;
-		naveX += (naveNewX - naveX) / 5;
-
-		$('.nave')
-			.css('top', naveY + 'px')
-			.css('left', naveX + 'px');
-
-		$('.tiro').each(function(index, el) {
-			// var tiroY = $(this).position().top;
-			var tiroX = $(this).position().left + 10;
-			$(this)
-				// .css('top', tiroY + 'px')
-				.css('left', tiroX + 'px');			
-		});
-
-	}, 40);
-	*/
-	
 });
 
 
