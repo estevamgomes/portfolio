@@ -36,18 +36,29 @@
 	// start responsive grid - http://www.responsivegridsystem.com/calculator/
 	/*  GO FULL WIDTH BELOW 480 PIXELS */
 	.col { 
-		margin: 1% 0 1% 0%;
+		margin: 1% 0 5% 0%;
 	}
     .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
 		width: 100%; 
 	}
 	// end resposive grid
 
-
 	#container {
 		#header {
 			.menu-list-main .menu-item .contact-toggle {
 				display: none;
+			}
+		}
+		.content-wrapper.home .hentry {
+			&.span_8_of_12, &.span_9_of_12, &.span_10_of_12, &.span_11_of_12, &.span_12_of_12 {
+				overflow: hidden;
+				.entry-image {
+					img {
+						width: auto;
+						max-width: none;
+						height: 90vw;
+					}
+				}
 			}
 		}
 	}
