@@ -133,13 +133,16 @@ body {
 
 h1,h2,h3,h4 {
 	font-family: @header;
-	text-transform: uppercase;
 	margin: .4em 0;
+}
+
+h1, h2 {
+	text-transform: uppercase;
 }
 
 h1 { font-size: 1.8rem; }
 h2 { font-size: 1.4rem; }
-h3 { font-size: 1.2rem; }
+h3 { font-size: 1.4rem; }
 
 .lowercase {
 	text-transform: lowercase;
@@ -298,6 +301,26 @@ input, textarea, select, option {
 						// max-height: 90vh;
 						transition: all .2s;
 					}
+					@keyframes fade {
+						0% 	 { opacity: 0; }
+						20%  { opacity: 0; }
+						80%  { opacity: 1; }
+						100% { opacity: 1; }
+					}
+					&.carousel-fade {
+						position: relative;
+						img:not(:first-child) {
+							position: absolute;
+							top: 0;
+							left: 0;
+							opacity: 0;
+							animation-name: fade;
+							animation-timing-function: linear;
+							animation-duration: 10s;
+							animation-iteration-count: infinite;
+							animation-direction: alternate;
+						}
+					}
 				}
 				.entry-overlay {
 					.entry-header {
@@ -305,18 +328,13 @@ input, textarea, select, option {
 							padding-top: 10px;
 							display: block;
 							color: @preto;
+							font-size: 1.4rem;
 							.entry-title {
-								font-size: 1.4rem;
 								display: block;
-
-								font-family: @header;
 								text-transform: uppercase;
 								font-weight: bold;
 							}
 							.entry-description {
-								font-size: 1.4rem;
-								font-family: @header;
-								font-style: italic;
 							}
 						}
 					}
@@ -330,7 +348,7 @@ input, textarea, select, option {
 				h1 {
 					text-transform: uppercase;
 				}
-				p {
+				li, p {
 					font-size: 1.4rem;
 				}
 				a {
