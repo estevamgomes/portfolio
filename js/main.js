@@ -77,32 +77,46 @@ $(function(){
 		$('video').on('ended',function(){
 			$(this).closest('.browser').removeClass('full');
 		});
+
 			
 		////////////
 		// filtro //
 		////////////
 		$('.filter-tag').click(function(event) {
 			if($('.home').length > 0) event.preventDefault();
+
 			if($(this).parent().hasClass('active')) {
 				$('.filter-tag').parent().removeClass('active');
-				$('.home .hentry').removeClass('grayscale');
+				$('.home .hentry').removeClass('grayscale').parent().removeClass('hide');
+				$('.tag-title').remove();
 			} else {
 				var tag = $(this).data('tag-slug');
-				$('.filter-tag').not(this).parent().removeClass('active');
-				$(this).parent().addClass('active');
-				$('.home .hentry').not('.tag-' + tag).addClass('grayscale');
-				$('.home .hentry.tag-' + tag).removeClass('grayscale');
+				selectTag(tag);
 			}
+
 			$(".lazy").not(".loaded").show().lazyload();
+			$(this).blur();
 		});
 
 		// ao iniciar o site vê se algum parâmetro já foi enviado pelo get para filtrar o conteúdo
 		var tag = $.urlParam('tag'); // tag
 		if(tag != null) {
-			$('.filter-tag').not('[data-tag-slug=' + tag + ']').parent().removeClass('active');
+			selectTag(tag);
+		}
+
+		function selectTag(tag) {
+			$('.filter-tag').not('[data-tag-slug="' + tag + '"]').parent().removeClass('active');
 			$('[data-tag-slug=' + tag + ']').parent().addClass('active');
-			$('.home .hentry').not('.tag-' + tag).addClass('grayscale');
-			$('.home .hentry.tag-' + tag).removeClass('grayscale');
+			$('.home .hentry').not('.tag-' + tag).addClass('grayscale').parent().addClass('hide');
+			$('.home .hentry.tag-' + tag).removeClass('grayscale').parent().removeClass('hide');
+
+			var tagName = $('[data-tag-slug="' + tag + '"]').html();
+			if($('.tag-title').length > 0) {
+				$('.tag-title .tag-name').html(tagName);
+			} else {					
+				var html = '<h2 class="tag-title"><span class="tag-name">' + tagName + '</span></h2>';
+				$('.home').prepend(html);
+			}
 		}
 
 	});
