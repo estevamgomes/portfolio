@@ -1,0 +1,89 @@
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 600px) {
+
+	#cabecalho {
+		background: transparent;
+		h1, h2 {
+			font-size: 2.6rem;
+		}
+	}
+
+	#produtos {
+		padding: @margem / 2;
+		padding-top: @margem / 4;
+
+		#produtos-filtros-container {
+			padding: 0;
+
+			#toggle-container {
+				padding: 0;
+			}
+
+			#ordem-toggle {
+				float: right;
+			}
+
+			.menu-dropdown {
+				position: absolute;
+				left: 0;
+				top: 100%;
+				margin-right: 0;
+			}
+
+			#produtos-ordem {
+				left: auto !important;
+				right: 0;
+			}
+		}
+
+		#produtos-container {
+			grid-template-columns: ~'repeat(2, 1fr)';
+		}
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+
+	#cabecalho {
+		padding: @margem;
+		padding-bottom: @margem / 2;
+	}
+
+	#produtos {
+		padding: @margem;
+		padding-top: @margem / 2;
+
+		#produtos-container {
+			grid-template-columns: ~'repeat(3, 1fr)';
+
+			.produto {
+
+				.produto-info {
+					padding: 0 10% @margem 10%;
+				}
+
+				.produto-imagens {
+					img {
+						max-width: 80%;
+						max-height: 80%;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  // Style adjustments for high resolution devices
+}
+*/

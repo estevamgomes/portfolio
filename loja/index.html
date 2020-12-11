@@ -1,0 +1,993 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Estevam · Loja</title>
+	<meta name="description" content="Loja do artista Estevam Gomes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- 
+	<meta property="og:title" content="Estevam · Loja">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+ 	-->
+
+	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="theme-color" content="#000">
+</head>
+
+<body>
+
+
+<header id="cabecalho">
+	<h1>Estevam.</h1>
+	<h2>Loja</h2>
+</header>
+
+<section id="produtos">
+
+	<div id="produtos-filtros-container">
+
+		<div id="toggle-container">
+			<button class="menu-dropdown-toggle" name="produtos-filtro-categoria">Categorias</button>
+			<button class="menu-dropdown-toggle" name="produtos-filtro-tiragem">Tiragem</button>
+			<button class="menu-dropdown-toggle" name="produtos-filtro-formato">Formato</button>
+			<button class="menu-dropdown-toggle" id="ordem-toggle" name="produtos-ordem">Ordem</button>
+		</div>
+
+		<div class="menu-dropdown" id="produtos-filtro-categoria">
+			<div class="menu-item">
+				<input class="categoria-checkbox filtro-checkbox" type="checkbox" checked name="categoria-original" id="categoria-original" value="Original">
+				<label for="categoria-original">Original</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="categoria-checkbox filtro-checkbox" type="checkbox" checked name="categoria-serigrafia" id="categoria-serigrafia" value="Serigrafia">
+				<label for="categoria-serigrafia">Serigrafia</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="categoria-checkbox filtro-checkbox" type="checkbox" checked name="categoria-poster" id="categoria-poster" value="Poster">
+				<label for="categoria-poster">Poster</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="categoria-checkbox filtro-checkbox" type="checkbox" checked name="categoria-fineart" id="categoria-fineart" value="Fine Art">
+				<label for="categoria-fineart">Fine Art</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="categoria-checkbox filtro-checkbox" type="checkbox" checked name="categoria-publicacao" id="categoria-publicacao" value="Publicação">
+				<label for="categoria-publicacao">Publicação</label>
+			</div>
+		</div>
+
+		<div class="menu-dropdown" id="produtos-filtro-tiragem">
+			<div class="menu-item">
+				<input class="tiragem-checkbox filtro-checkbox" type="checkbox" checked name="tiragem-unico" id="tiragem-unico" value="Único">
+				<label for="tiragem-unico">Único</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="tiragem-checkbox filtro-checkbox" type="checkbox" checked name="tiragem-limitada" id="tiragem-limitada" value="Limitada">
+				<label for="tiragem-limitada">Limitada</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="tiragem-checkbox filtro-checkbox" type="checkbox" checked name="tiragem-ilimitada" id="tiragem-ilimitada" value="Ilimitada">
+				<label for="tiragem-ilimitada">Ilimitada</label>
+			</div>
+		</div>
+
+		<div class="menu-dropdown" id="produtos-filtro-formato">
+			<div class="menu-item">
+				<input class="formato-checkbox filtro-checkbox" type="checkbox" checked name="formato-outros" id="formato-outros" value="Outros formatos">
+				<label for="formato-outros">Outros formatos</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="formato-checkbox filtro-checkbox" type="checkbox" checked name="formato-a2" id="formato-a2" value="A2">
+				<label for="formato-a2">A2 (42 x 59,4 cm)</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="formato-checkbox filtro-checkbox" type="checkbox" checked name="formato-a3" id="formato-a3" value="A3">
+				<label for="formato-a3">A3 (29,7 x 42 cm)</label>
+			</div>
+
+			<div class="menu-item">
+				<input class="formato-checkbox filtro-checkbox" type="checkbox" checked name="formato-a4" id="formato-a4" value="A4">
+				<label for="formato-a4">A4 (21 x 29,7 cm)</label>
+			</div>
+			
+			<!-- 
+			<div class="menu-item">
+				<input class="formato-checkbox filtro-checkbox" type="checkbox" checked name="formato-a5" id="formato-a5" value="A5">
+				<label for="formato-a5">A5 (14,8 x 21 cm)</label>
+			</div>
+			-->
+		</div>
+
+		<div class="menu-dropdown" id="produtos-ordem">
+			<div class="menu-item">
+				<button class="botao" value="padrao">Padrão</button>
+			</div>
+			<div class="menu-item">
+				<button class="botao" value="menor-preco">Menor Preço</button>
+			</div>
+			<div class="menu-item">
+				<button class="botao" value="maior-preco">Maior Preço</button>
+			</div>
+			<div class="menu-item">
+				<button class="botao" value="recentes">Mais recentes</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="produtos-container">
+
+		<article class="produto formato-outros tiragem-limitada categoria-fineart">
+			<div class="produto-imagens">
+				<img src="img/maletta-thumb.jpg" data-src-hires="img/maletta-hires.jpg" alt="Ilustração Maletta">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Maletta</span>
+					<span class="ano">2020</span>
+				</h2>
+				
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">43 x 44 cm</span>
+						<span class="preco"><span class="preco-valor">300</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão Fine Art</p>
+				<p class="tiragem">30 exemplares</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Beagá -->
+		<article class="produto formato-outros tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/beaga-thumb.jpg" data-src-hires="img/beaga-hires.jpg" alt="Ilustração Beagá">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Beagá</span>
+					<span class="ano">2019</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">29,7 x 29,7 cm</span>
+						<span class="preco"><span class="preco-valor">45</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- O Cortiço -->
+		<article class="produto formato-a4 formato-a3 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/cortico-thumb.jpg" data-src-hires="img/cortico-hires.jpg" alt="Ilustração O Cortiço">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">O Cortiço</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco">60,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Astronautas vs Parasitas -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/astronautas-vs-parasitas-thumb.jpg" data-src-hires="img/astronautas-vs-parasitas-hires.jpg" alt="Ilustração Astronautas vs Parasitas">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Astronautas vs Parasitas</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">300</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Zica: Astronautas vs Parasitas -->
+		<article class="produto formato-outros tiragem-limitada categoria-serigrafia">
+			<div class="produto-imagens">
+				<img src="img/zica-thumb.jpg" data-src-hires="img/zica-hires.jpg" alt="Serigrafia Zica">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Zica: Astronautas vs Parasitas</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">48 x 66 cm</span>
+						<span class="preco"><span class="preco-valor">90</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Serigrafia</p>
+				<p class="tiragem">100 exemplares</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Trânsito -->
+		<article class="produto formato-a3 tiragem-limitada categoria-serigrafia">
+			<div class="produto-imagens">
+				<img src="img/transito-thumb.jpg" data-src-hires="img/transito-hires.jpg" alt="Serigrafia Trânsito">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Trânsito</span>
+					<span class="ano">2016</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">120</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Serigrafia</p>
+				<p class="tiragem">14 exemplares</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Onze Zero Um -->
+		<article class="produto formato-a3 formato-a2 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/onze-zero-um-thumb.jpg" data-src-hires="img/onze-zero-um-hires.jpg" alt="Serigrafia Trânsito">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Onze Zero Um</span>
+					<span class="ano">2019</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A2 (42 x 59,4 cm)</span>
+						<span class="preco"><span class="preco-valor">90</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Parafuso 1 -->
+		<article class="produto formato-outros tiragem-limitada categoria-publicacao">
+			<div class="produto-imagens">
+				<img src="img/parafuso-1-thumb.jpg" data-src-hires="img/parafuso-1-hires.jpg" alt="Revista Parafuso 1">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Revista Parafuso 1</span>
+					<span class="ano">2019</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">40</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Show ETs -->
+		<article class="produto formato-a4 formato-a3 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/show-ets-thumb.jpg" data-src-hires="img/show-ets-hires.jpg" alt="Ilustração Show ETs">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Show ETs</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Show Animais -->
+		<article class="produto formato-a4 formato-a3 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/show-animais-thumb.jpg" data-src-hires="img/show-animais-hires.jpg" alt="Ilustração Show Animais">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Show Animais</span>
+					<span class="ano">2016</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Show Animais -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/show-animais-original-thumb.jpg" data-src-hires="img/show-animais-original-hires.jpg" alt="Ilustração Show Animais (original)">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Show Animais (original)</span>
+					<span class="ano">2016</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">240</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Criatura -->
+		<article class="produto formato-a4 formato-a3 formato-a2 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/criatura-thumb.jpg" data-src-hires="img/criatura-hires.jpg" alt="Ilustração Criatura">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Criatura</span>
+					<span class="ano">2019</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A2 (42 x 59,4 cm)</span>
+						<span class="preco"><span class="preco-valor">90</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Criatura (com logo) -->
+		<article class="produto formato-a4 formato-a3 formato-a2 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/criatura-logo-thumb.jpg" data-src-hires="img/criatura-logo-hires.jpg" alt="Ilustração Criatura (com logo)">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Criatura (com logo)</span>
+					<span class="ano">2019</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Frequency Jam -->
+		<article class="produto formato-outros tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/frequency-jam-thumb.jpg" data-src-hires="img/frequency-jam-hires.jpg" alt="Ilustração Frequency Jam">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Frequency Jam</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">21 x 21 cm</span>
+						<span class="preco"><span class="preco-valor">15</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">29,7 x 29,7 cm</span>
+						<span class="preco"><span class="preco-valor">45</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Jaguatirica -->
+		<article class="produto formato-a4 formato-a3 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/jaguatirica-thumb.jpg" data-src-hires="img/jaguatirica-hires.jpg" alt="Ilustração Jaguatirica">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Jaguatirica</span>
+					<span class="ano">2019</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Bromélia -->
+		<article class="produto formato-a4 formato-a3 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/bromelia-thumb.jpg" data-src-hires="img/bromelia-hires.jpg" alt="Ilustração Bromélia">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Bromélia</span>
+					<span class="ano">2019</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Beagá I (esboço original do painel) -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/painel-beaga-I-thumb.jpg" data-src-hires="img/painel-beaga-I-hires.jpg" alt="Painel Beagá I (esboço original do painel)">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Beagá I (esboço do painel)</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (29,7 x 21 cm)</span>
+						<span class="preco"><span class="preco-valor">200</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Beagá II (esboço original do painel) -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/painel-beaga-II-thumb.jpg" data-src-hires="img/painel-beaga-II-hires.jpg" alt="Painel Beagá II (esboço original do painel)">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Beagá II (esboço do painel)</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (29,7 x 21 cm)</span>
+						<span class="preco"><span class="preco-valor">300</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Beagá (original) -->
+		<article class="produto formato-a3 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/beaga-original-thumb.jpg" data-src-hires="img/beaga-original-hires.jpg" alt="Ilustração Beagá Original">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Beagá (original)</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (42 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">450</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Rio-Beagá (original) -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/rio-beaga-thumb.jpg" data-src-hires="img/rio-beaga-hires.jpg" alt="Ilustração Rio-Beagá Original">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Rio-Beagá</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (29,7 x 21 cm)</span>
+						<span class="preco"><span class="preco-valor">350</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Duelo de MCs 2017 Original -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/duelo-thumb.jpg" data-src-hires="img/duelo-hires.jpg" alt="Ilustração Duelo de MCs 2017 Original">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Duelo de MCs (original)</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (29,7 x 21 cm)</span>
+						<span class="preco"><span class="preco-valor">400</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Dilúvio Original -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/diluvio-thumb.jpg" data-src-hires="img/diluvio-hires.jpg" alt="Ilustração Dilúvio Original">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Dilúvio (original)</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">400</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Estudo Trajes Espaciais -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/estudo-trajes-espaciais-thumb.jpg" data-src-hires="img/estudo-trajes-espaciais-hires.jpg" alt="Ilustração Estudo Trajes Espaciais">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Estudo Trajes Espaciais</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">240</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Astronauta vs Verme -->
+		<article class="produto esgotado formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/astronautas-vs-verme-thumb.jpg" data-src-hires="img/astronautas-vs-verme-hires.jpg" alt="Ilustração Astronauta vs Verme">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Astronauta vs Verme</span>
+					<span class="ano">2017</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">240</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Jaguatirica -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/inktober-2018-jaguatirica-thumb.jpg" data-src-hires="img/inktober-2018-jaguatirica-hires.jpg" alt="Ilustração Jaguatirica">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Jaguatirica</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">150</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Lobo Guará -->
+		<article class="produto esgotado formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/inktober-2018-lobo-guara-thumb.jpg" data-src-hires="img/inktober-2018-lobo-guara-hires.jpg" alt="Ilustração Lobo Guará">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Lobo Guará</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">150</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Mico-estrela -->
+		<article class="produto formato-a4 tiragem-unico categoria-original">
+			<div class="produto-imagens">
+				<img src="img/inktober-2018-mico-estrela-thumb.jpg" data-src-hires="img/inktober-2018-mico-estrela-hires.jpg" alt="Ilustração Mico-estrela">
+			</div>
+
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Mico-estrela</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">150</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Nanquim s/ papel</p>
+				<p class="tiragem">Ilustração original</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Sônia Amarelo -->
+		<article class="produto formato-a3 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/sonia-amarelo-thumb.jpg" data-src-hires="img/sonia-amarelo-hires.jpg" alt="Ilustração Sônia Amarelo">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Sônia Amarelo</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Sônia Vermelho-->
+		<article class="produto formato-a3 tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/sonia-vermelho-thumb.jpg" data-src-hires="img/sonia-vermelho-hires.jpg" alt="Ilustração Sônia Vermelho">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Sônia Vermelho</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A4 (21 x 29,7 cm)</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">A3 (29,7 x 42 cm)</span>
+						<span class="preco"><span class="preco-valor">60</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+		<!-- Jam -->
+		<article class="produto formato-outros tiragem-ilimitada categoria-poster">
+			<div class="produto-imagens">
+				<img src="img/jam-thumb.jpg"  data-src-hires="img/jam-hires.jpg" alt="Ilustração Jam">
+			</div>
+			
+			<div class="produto-info">
+				<h2 class="nome-ano">
+					<span class="nome">Jam</span>
+					<span class="ano">2018</span>
+				</h2>
+
+				<div class="dimensoes-preco-lista">
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">21 x 13,9 cm</span>
+						<span class="preco"><span class="preco-valor">15</span>,00</span>
+					</div>
+
+					<div class="dimensoes-preco-item">
+						<span class="dimensoes">29,7 x 19,6 cm</span>
+						<span class="preco"><span class="preco-valor">30</span>,00</span>
+					</div>
+				</div>
+
+				<p class="tecnica">Impressão digital</p>
+				<p class="tiragem">Tiragem ilimitada</p>
+
+				<button class="expandir"><span class="exibir">+</span><span class="esconder">-</span> detalhes</button>
+			</div>
+		</article>
+
+	</div>
+
+</section>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+<script>
+	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+	ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+ -->
+
+</body>
+
+</html>
