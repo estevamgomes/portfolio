@@ -3,13 +3,13 @@
 var imagem_zoom_container = document.createElement('span');
 	imagem_zoom_container.id = "imagem-zoom-container";
 
-	imagem_zoom_container.addEventListener('click', function(event) {
-		this.classList.remove('ativo');
-	});
-
 var imagem_zoom = document.createElement('img');
 	imagem_zoom.id = "imagem-zoom";
 
+	imagem_zoom_container.addEventListener('click', function(event) {
+		this.classList.remove('ativo');
+		imagem_zoom.src = '';
+	});
 
 var imagem_zoom_loading = document.createElement('div');
 	imagem_zoom_loading.classList.add('loading');
@@ -53,8 +53,6 @@ for (var p = 0; p < produtos_imagens.length; p++) {
 		img_downloading.src = hires_src;
 	});
 }
-
-
 
 // detalhes dos produtos
 
@@ -152,6 +150,14 @@ for (var mt = 0; mt < menu_toggle.length; mt++) {
 
 	});
 }
+
+
+
+window.addEventListener("scroll", function() {
+	imagem_zoom_container.classList.remove('ativo');
+	for (var i = menu_toggle.length - 1; i >= 0; i--) 	menu_toggle[i].classList.remove('ativo');
+	for (var i = menu_dropdown.length - 1; i >= 0; i--) menu_dropdown[i].classList.remove('ativo');
+});
 
 
 
