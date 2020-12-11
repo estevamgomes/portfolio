@@ -391,39 +391,115 @@ body {
 }
 
 #imagem-zoom-container {
-	padding-top: 0;
 	position: fixed;
-	top: 0;
 	left: 0;
+	top: 0;
 	bottom: 0;
 	right: 0;
-	z-index: 4;
-	background-color: fade(@preto, 80%);
+	z-index: -1;
+	opacity: 0;
+	pointer-events: none;
 	cursor: zoom-out;
-
-	display: none;
-
+	background-color: fade(@preto, 0%);
+	transition: background .2s;
+	
 	#imagem-zoom {
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center center;
-	}
-
-	img {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 
-		width: 95vw;
-		height: 95vh;
+		width: 90vw;
+		height: 90vh;
 		object-fit: contain;
+		opacity: 0;
+
+		transition: all .4s;
 
 		box-shadow: 0 2px 3px rgba(25,25,50,.6);
 	}
 
+	// loading
+	.loading {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 80px;
+		height: 30px;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		border-radius: 15px;
+		background: fade(@preto, 50%);
+
+		&.carregado {
+			display: none;
+		}
+
+		div {
+			position: absolute;
+			top: 9px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: #fff;
+			animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+			&:nth-child(1) {
+				left: ~'calc(50% - 30px)';
+				animation: lds-ellipsis1 0.6s infinite;
+			}
+			&:nth-child(2) {
+				left: ~'calc(50% - 30px)';
+				animation: lds-ellipsis2 0.6s infinite;
+			}
+			&:nth-child(3) {
+				left: ~'calc(50% - 6px)';
+				animation: lds-ellipsis2 0.6s infinite;
+			}
+			&:nth-child(4) {
+				left: ~'calc(50% + 18px)';
+				animation: lds-ellipsis3 0.6s infinite;
+			}
+		}
+
+		@keyframes lds-ellipsis1 {
+			0% {
+				transform: scale(0);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		@keyframes lds-ellipsis3 {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(0);
+			}
+		}
+		@keyframes lds-ellipsis2 {
+			0% {
+				transform: translate(0, 0);
+			}
+			100% {
+				transform: translate(24px, 0);
+			}
+		}
+	}
+
 	&.ativo {
-		display: block;
+		top: 0;
+		bottom: 0;
+		z-index: 4;
+		opacity: 1;
+		background-color: fade(@preto, 80%);
+		pointer-events: auto;
+		#imagem-zoom {
+			opacity: 1;
+			width: 95vw;
+			height: 95vh;
+		}
 	}
 }
 

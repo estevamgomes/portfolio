@@ -11,7 +11,17 @@ var imagem_zoom = document.createElement('img');
 	imagem_zoom.id = "imagem-zoom";
 
 
+var imagem_zoom_loading = document.createElement('div');
+	imagem_zoom_loading.classList.add('loading');
+
+	// divs para animacao do loading
+	imagem_zoom_loading.appendChild(document.createElement('div'));
+	imagem_zoom_loading.appendChild(document.createElement('div'));
+	imagem_zoom_loading.appendChild(document.createElement('div'));
+	imagem_zoom_loading.appendChild(document.createElement('div'));
+
 imagem_zoom_container.appendChild(imagem_zoom);
+imagem_zoom_container.appendChild(imagem_zoom_loading);
 document.body.appendChild(imagem_zoom_container);
 
 var produtos = document.getElementsByClassName('produto'); 
@@ -37,6 +47,7 @@ for (var p = 0; p < produtos_imagens.length; p++) {
 		var img_downloading = new Image();
 		img_downloading.onload = function() {
 			// imagem_zoom.style.backgroundImage = 'url("' + this.src + '")';
+			imagem_zoom_loading.classList.add('carregado');
 			imagem_zoom.src = this.src;
 		};
 		img_downloading.src = hires_src;
