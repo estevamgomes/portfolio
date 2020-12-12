@@ -430,9 +430,12 @@ body {
 		transform: translate(-50%, -50%);
 		border-radius: 15px;
 		background: fade(@preto, 50%);
+		transition: opacity .6s;
+		opacity: 1;
+		pointer-events: none;
 
 		&.carregado {
-			display: none;
+			opacity: 0;
 		}
 
 		div {

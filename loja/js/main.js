@@ -39,14 +39,13 @@ for (var p = 0; p < produtos_imagens.length; p++) {
 	var imagem = produtos_imagens[p].getElementsByTagName('img'); 
 	imagem[0].addEventListener('click', function(event) {
 
+		imagem_zoom_loading.classList.remove('carregado');
 		imagem_zoom_container.classList.add('ativo');
-		// imagem_zoom.style.backgroundImage = 'url("' + this.src + '")';
 		imagem_zoom.src = this.src;
 
 		var hires_src = this.getAttribute('data-src-hires');
 		var img_downloading = new Image();
 		img_downloading.onload = function() {
-			// imagem_zoom.style.backgroundImage = 'url("' + this.src + '")';
 			imagem_zoom_loading.classList.add('carregado');
 			imagem_zoom.src = this.src;
 		};
